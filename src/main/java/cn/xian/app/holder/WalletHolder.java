@@ -1,14 +1,14 @@
-package cn.xian.app.provider;
+package cn.xian.app.holder;
 
 import cn.xian.app.model.entity.Wallet;
 import top.onceio.aop.annotation.Transactional;
-import top.onceio.db.dao.DaoProvider;
+import top.onceio.db.dao.DaoHolder;
 import top.onceio.db.dao.tpl.UpdateTpl;
 import top.onceio.exception.Failed;
 import top.onceio.mvc.annocations.AutoApi;
 
 @AutoApi(Wallet.class)
-public class WalletProvider extends DaoProvider<Wallet> {
+public class WalletHolder extends DaoHolder<Wallet> {
 	
 	@Transactional
 	public void transfer(Long from,Long to,Integer v) {

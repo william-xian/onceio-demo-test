@@ -5,8 +5,8 @@ import java.util.Set;
 
 import org.junit.Test;
 
-import top.onceio.db.meta.DDEngine;
-import top.onceio.util.OUtils;
+import top.onceio.core.db.meta.DDEngine;
+import top.onceio.core.util.OUtils;
 
 public class DDEngineTest {
 

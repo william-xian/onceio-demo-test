@@ -5,7 +5,7 @@ import java.lang.reflect.Type;
 import org.junit.Assert;
 import org.junit.Test;
 
-import top.onceio.util.OReflectUtil;
+import top.onceio.core.util.OReflectUtil;
 
 public class OReflectUtilTest {
 	class Zero {

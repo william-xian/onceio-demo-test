@@ -7,7 +7,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import cn.xian.app.model.entity.UserInfo;
-import top.onceio.util.IDGenerator;
+import top.onceio.core.util.IDGenerator;
 
 public class TransTest extends DaoBaseTest{
 	@BeforeClass

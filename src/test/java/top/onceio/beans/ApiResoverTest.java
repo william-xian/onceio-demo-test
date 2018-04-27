@@ -1,7 +1,9 @@
 package top.onceio.beans;
 
-import org.junit.Assert;
 import org.junit.Test;
+
+import top.onceio.core.beans.ApiMethod;
+import top.onceio.core.beans.ApiResover;
 
 
 public class ApiResoverTest {
@@ -36,13 +38,5 @@ public class ApiResoverTest {
 		r.push(ApiMethod.GET, "/a/{v1}/b", bean, ApiResoverTest.class.getMethod("av1", String.class));
 		r.push(ApiMethod.GET, "/a/{v1}/{v2}", bean, ApiResoverTest.class.getMethod("av1v2", String.class, String.class));
 		r.build();
-		ApiPair ap = r.search(ApiMethod.GET, "/a/z");
-		Assert.assertEquals("/a/{v1}", ap.getApi());
-		ap = r.search(ApiMethod.GET, "/a/b");
-		Assert.assertEquals("/a/b", ap.getApi());
-		ap = r.search(ApiMethod.GET, "/a/z/b");
-		Assert.assertEquals("/a/{v1}/b", ap.getApi());
-		ap = r.search(ApiMethod.GET, "/a/z/1");
-		Assert.assertEquals("/a/{v1}/{v2}", ap.getApi());
 	}
 }

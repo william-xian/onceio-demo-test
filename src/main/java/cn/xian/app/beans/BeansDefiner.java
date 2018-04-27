@@ -1,9 +1,9 @@
 package cn.xian.app.beans;
 
-import top.onceio.cache.Cache;
-import top.onceio.cache.impl.FIFOMemoryCache;
-import top.onceio.mvc.annocations.Def;
-import top.onceio.mvc.annocations.Definer;
+import top.onceio.core.annotation.Def;
+import top.onceio.core.annotation.Definer;
+import top.onceio.core.cache.Cache;
+import top.onceio.core.cache.impl.FIFOMemoryCache;
 
 @Definer
 public class BeansDefiner {

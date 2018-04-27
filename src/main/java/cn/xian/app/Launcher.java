@@ -1,7 +1,7 @@
 package cn.xian.app;
 
-import top.onceio.annotation.BeansIn;
-import top.onceio.mvc.Webapp;
+import top.onceio.core.annotation.BeansIn;
+import top.onceio.plugins.Webapp;
 
 
 @BeansIn("cn.xian.app")

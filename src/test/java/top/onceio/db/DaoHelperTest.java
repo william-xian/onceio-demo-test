@@ -10,13 +10,13 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import cn.xian.app.model.entity.UserInfo;
-import top.onceio.db.dao.Cnd;
-import top.onceio.db.dao.Page;
-import top.onceio.db.dao.tpl.SelectTpl;
-import top.onceio.db.dao.tpl.Tpl;
-import top.onceio.db.dao.tpl.UpdateTpl;
-import top.onceio.util.IDGenerator;
-import top.onceio.util.OUtils;
+import top.onceio.core.db.dao.Cnd;
+import top.onceio.core.db.dao.Page;
+import top.onceio.core.db.dao.tpl.SelectTpl;
+import top.onceio.core.db.dao.tpl.Tpl;
+import top.onceio.core.db.dao.tpl.UpdateTpl;
+import top.onceio.core.util.IDGenerator;
+import top.onceio.core.util.OUtils;
 
 public class DaoHelperTest extends DaoBaseTest{
 	

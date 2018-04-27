@@ -17,12 +17,12 @@ import cn.xian.app.model.entity.UserInfo;
 import cn.xian.app.model.entity.UserProfile;
 import cn.xian.app.model.entity.Wallet;
 import cn.xian.app.model.view.GoodsOrderView;
-import top.onceio.db.dao.IdGenerator;
-import top.onceio.db.dao.impl.DaoHelper;
-import top.onceio.db.jdbc.JdbcHelper;
-import top.onceio.db.tbl.OEntity;
-import top.onceio.db.tbl.OI18n;
-import top.onceio.util.IDGenerator;
+import top.onceio.core.db.dao.IdGenerator;
+import top.onceio.core.db.dao.impl.DaoHelper;
+import top.onceio.core.db.jdbc.JdbcHelper;
+import top.onceio.core.db.tbl.OEntity;
+import top.onceio.core.db.tbl.OI18n;
+import top.onceio.core.util.IDGenerator;
 
 public class DaoBaseTest {
 	protected static final JdbcHelper jdbcHelper = new JdbcHelper();

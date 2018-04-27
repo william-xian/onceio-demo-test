@@ -15,10 +15,10 @@ import cn.xian.app.model.entity.GoodsDesc;
 import cn.xian.app.model.entity.GoodsOrder;
 import cn.xian.app.model.entity.UserInfo;
 import cn.xian.app.model.view.GoodsOrderView;
-import top.onceio.db.dao.Cnd;
-import top.onceio.db.dao.Page;
-import top.onceio.db.dao.tpl.SelectTpl;
-import top.onceio.db.dao.tpl.Tpl;
+import top.onceio.core.db.dao.Cnd;
+import top.onceio.core.db.dao.Page;
+import top.onceio.core.db.dao.tpl.SelectTpl;
+import top.onceio.core.db.dao.tpl.Tpl;
 
 public class DaoHelperViewTest extends DaoBaseTest{
 	

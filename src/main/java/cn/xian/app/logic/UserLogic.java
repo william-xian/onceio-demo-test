@@ -6,12 +6,12 @@ import java.util.Map;
 import cn.xian.app.holder.UserHolder;
 import cn.xian.app.holder.WalletHolder;
 import cn.xian.app.model.entity.UserInfo;
-import top.onceio.aop.annotation.Transactional;
-import top.onceio.db.dao.Cnd;
-import top.onceio.db.dao.Page;
-import top.onceio.exception.Failed;
-import top.onceio.mvc.annocations.Def;
-import top.onceio.mvc.annocations.Using;
+import top.onceio.core.annotation.Def;
+import top.onceio.core.annotation.Using;
+import top.onceio.core.aop.annotation.Transactional;
+import top.onceio.core.db.dao.Cnd;
+import top.onceio.core.db.dao.Page;
+import top.onceio.core.exception.Failed;
 
 @Def
 public class UserLogic {

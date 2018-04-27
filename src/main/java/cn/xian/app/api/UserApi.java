@@ -4,10 +4,10 @@ import java.util.Map;
 
 import cn.xian.app.logic.UserLogic;
 import cn.xian.app.model.entity.UserInfo;
-import top.onceio.db.dao.Page;
-import top.onceio.mvc.annocations.Api;
-import top.onceio.mvc.annocations.Param;
-import top.onceio.mvc.annocations.Using;
+import top.onceio.core.annotation.Using;
+import top.onceio.core.db.dao.Page;
+import top.onceio.core.mvc.annocations.Api;
+import top.onceio.core.mvc.annocations.Param;
 
 @Api("/user")
 public class UserApi {

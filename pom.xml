@@ -12,13 +12,19 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<onceio.ver>0.0.1</onceio.ver>
 	</properties>
 
 	<dependencies>
 		<dependency>
 			<groupId>top.onceio</groupId>
-			<artifactId>onceio</artifactId>
-			<version>0.0.1</version>
+			<artifactId>onceio-core</artifactId>
+			<version>${onceio.ver}</version>
+		</dependency>
+		<dependency>
+			<groupId>top.onceio</groupId>
+			<artifactId>onceio-servlet</artifactId>
+			<version>${onceio.ver}</version>
 		</dependency>  	
 			<dependency>
 	    	<groupId>javax.servlet</groupId>

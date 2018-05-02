@@ -1,74 +1,19 @@
 package top.onceio.db;
 
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Properties;
-
-import com.alibaba.druid.pool.DruidDataSource;
-
-import cn.xian.app.model.entity.Goods;
-import cn.xian.app.model.entity.GoodsDesc;
-import cn.xian.app.model.entity.GoodsOrder;
-import cn.xian.app.model.entity.GoodsShipping;
-import cn.xian.app.model.entity.UserFriend;
-import cn.xian.app.model.entity.UserInfo;
-import cn.xian.app.model.entity.UserProfile;
-import cn.xian.app.model.entity.Wallet;
-import cn.xian.app.model.view.GoodsOrderView;
-import top.onceio.core.db.dao.IdGenerator;
+import top.onceio.core.beans.BeansEden;
 import top.onceio.core.db.dao.impl.DaoHelper;
 import top.onceio.core.db.jdbc.JdbcHelper;
-import top.onceio.core.db.tbl.OEntity;
 import top.onceio.core.db.tbl.OI18n;
-import top.onceio.core.util.IDGenerator;
 
 public class DaoBaseTest {
-	protected static final JdbcHelper jdbcHelper = new JdbcHelper();
+	protected static JdbcHelper jdbcHelper = new JdbcHelper();
 
-	protected static final DaoHelper daoHelper = new DaoHelper();
+	protected static DaoHelper daoHelper = new DaoHelper();
 	
 	public static void initDao() {
-		try {
-		Properties prop = new Properties();
-		prop.load(new FileInputStream("src/main/resources/onceio.properties"));
-		String driver = prop.getProperty("onceio.datasource.driver");
-		String url = prop.getProperty("onceio.datasource.url");
-		String username =prop.getProperty("onceio.datasource.username");
-		String password = prop.getProperty("onceio.datasource.password");
-		String maxActive = prop.getProperty("onceio.datasource.maxActive");
-		DruidDataSource ds = new DruidDataSource();
-		ds.setDriverClassName(driver);
-		ds.setUrl(url);
-		ds.setUsername(username);
-		ds.setPassword(password);
-		ds.setMaxActive(Integer.parseInt(maxActive));
-		jdbcHelper.setDataSource(ds);
-		IdGenerator idGenerator = new IdGenerator() {
-			@Override
-			public Long next(Class<?> entityClass) {
-				return IDGenerator.randomID();
-			}
-			
-		};
-		List<Class<? extends OEntity>> entities = new ArrayList<>();
-		entities.add(UserInfo.class);
-		entities.add(UserProfile.class);
-		entities.add(Wallet.class);
-		entities.add(UserFriend.class);
-		entities.add(Goods.class);
-		entities.add(GoodsDesc.class);
-		entities.add(GoodsOrder.class);
-		entities.add(GoodsShipping.class);
-		entities.add(GoodsOrderView.class);
-		
-		entities.add(OI18n.class);
-		
-		daoHelper.init(jdbcHelper, idGenerator,entities);
-		}catch(IOException e) {
-			e.printStackTrace();
-		}
+		BeansEden.get().resovle("cn.xian.app");
+		jdbcHelper = BeansEden.get().load(JdbcHelper.class);
+		daoHelper = BeansEden.get().load(DaoHelper.class);
 	}
 	
 	//@Test

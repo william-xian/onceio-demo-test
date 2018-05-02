@@ -37,7 +37,7 @@ public class DDEngineTest {
 		.append("GoodsOrder.goodsId-GoodsDesc {saled,content};")
 		.append("GoodsOrder.goodsOrderId-GoodsShipping {goodsOrderId,receiverId,addr receiverAddr};")
 			.build();
-		System.out.println(OUtils.toJSON(dde));
+		System.out.println(OUtils.toJson(dde));
 		Set<String> params = new HashSet<String>();
 		params.add("content");
 		params.add("receiverAddr");
@@ -62,7 +62,7 @@ public class DDEngineTest {
 		.append("O.gid-G {name gname};")
 		.append("O.uid-R.uid-R.fid-U {name fname,age fage};")
 			.build();
-		System.out.println(OUtils.toJSON(dde));
+		System.out.println(OUtils.toJson(dde));
 		Set<String> params = new HashSet<String>();
 		params.add("fname");
 		String sql = dde.genericJoinSqlByParams("O", params,null);

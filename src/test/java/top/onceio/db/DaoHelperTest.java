@@ -46,7 +46,7 @@ public class DaoHelperTest extends DaoBaseTest{
 			uc.setGenre(i%4);
 			uc.setAvatar(String.format("avatar%d%d",i%2,i%3));
 			uc.setPasswd("passwd"+i%3);
-			System.out.println(OUtils.toJSON(uc));
+			System.out.println(OUtils.toJson(uc));
 			ucs.add(uc);
 			ids.add(uc.getId());
 		}
@@ -169,7 +169,7 @@ public class DaoHelperTest extends DaoBaseTest{
 			ids.add(uc.getId());
 		}
 		daoHelper.batchInsert(ucs);
-		System.out.println(OUtils.toJSON(ucs));
+		System.out.println(OUtils.toJson(ucs));
 		Cnd<UserInfo> cnd1 = new Cnd<>(UserInfo.class);
 		cnd1.eq().setGenre(2);
 		cnd1.or().ne().setGenre(3);
@@ -212,7 +212,7 @@ public class DaoHelperTest extends DaoBaseTest{
 		for (UserInfo uc:ucs) {
 			ids.add(uc.getId());
 		}
-		System.out.println(OUtils.toJSON(ucs));
+		System.out.println(OUtils.toJson(ucs));
 		
 		Cnd<UserInfo> rm = new Cnd<>(UserInfo.class);
 		rm.in(ids.toArray()).setId(Tpl.USING_LONG);

@@ -16,7 +16,7 @@ public class LogAop extends ProxyAction{
 
 	@Override
 	public Object intercept(Object obj, Method method, Object[] args, MethodProxy proxy) throws Throwable {
-		LOGGER.debug(String.format("%s.%s(%s)", obj.getClass().getName(), method.getName(), OUtils.toJSON(args)));
+		LOGGER.debug(String.format("%s.%s(%s)", obj.getClass().getName(), method.getName(), OUtils.toJson(args)));
 		if (next() != null) {
 			return next().intercept(obj, method, args, proxy);
 		} else {

@@ -17,7 +17,7 @@
 	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<onceio.ver>0.0.1</onceio.ver>
+		<onceio.ver>0.0.2</onceio.ver>
 	</properties>
 
 	<dependencies>

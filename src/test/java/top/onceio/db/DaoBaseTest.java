@@ -11,7 +11,7 @@ public class DaoBaseTest {
 	protected static DaoHelper daoHelper = new DaoHelper();
 	
 	public static void initDao() {
-		BeansEden.get().resovle("cn.xian.app");
+		BeansEden.get().resovle(new String[] {"conf"},new String[] {"cn.xian.app"});
 		jdbcHelper = BeansEden.get().load(JdbcHelper.class);
 		daoHelper = BeansEden.get().load(DaoHelper.class);
 	}
